@@ -1,0 +1,15 @@
+<section *ngIf="movie">
+  <h1>{{movie.title}}</h1>
+
+  <p>
+    {{movie.opening_crawl}}
+  </p>
+
+  <br>
+
+  <ul>
+    <li *ngFor="let ship of movie.starships">
+      <a routerLink="/starship/{{getShipNumber(ship)}}">Starship {{getShipNumber(ship)}}</a>
+    </li>
+  </ul>
+</section>
